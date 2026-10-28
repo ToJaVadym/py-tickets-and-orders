@@ -11,18 +11,18 @@ from django.db import migrations, models
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('auth', '0012_alter_user_first_name_max_length'),
-        ('db', '0001_initial'),
+        ("auth", "0012_alter_user_first_name_max_length"),
+        ("db", "0001_initial"),
     ]
 
     operations = [
         migrations.AlterField(
-            model_name='movie',
-            name='actors',
-            field=models.ManyToManyField(related_name='movies', to='db.actor'),
+            model_name="movie",
+            name="actors",
+            field=models.ManyToManyField(related_name="movies", to="db.actor"),
         ),
         migrations.AlterField(
-            model_name='movie',
+            model_name="movie",
             name='genres',
             field=models.ManyToManyField(related_name='movies', to='db.genre'),
         ),
